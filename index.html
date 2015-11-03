@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/materialize/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="/css/main.css"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+    
+    <nav>
+        <div class="nav-wrapper yellow darken-4">
+            <a href="#" class="brand-logo">Hi, <span id="user-name"></span></a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        
+        <form id="login-form" method="POST">
+            <div class="row">
+                <div class="col s5">
+                    <input id="email" name="email" type="text" placeholder="email">
+                </div>
+                <div class="col s5">
+                    <input id="password" name="password" type="password" placeholder="Password">
+                </div>
+                <div class="col s2">
+                    <button class="btn waves-effect waves-light light-blue darken-1" type="submit">
+                        Login<i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </form>
+        
+        <form id="create-form">
+            <div class="row">
+                <div class="col s10">
+                    <input id="description" name="description" type="text" placeholder="Task description">
+                </div>
+                <div class="col s2">
+                    <button class="btn waves-effect waves-light light-blue darken-1" type="submit">
+                        Create<i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </form>
+        
+        <table class="responsive-table">
+            <thead>
+                <tr>
+                    <th>Done</th>
+                    <th>Task</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody id="tasks">
+            </tbody>
+        </table>
+    
+    </div>
+    
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/materialize/js/materialize.min.js"></script>
+    
+    <!--Funcionamiento de Todo API-->
+    <script type="text/javascript" src="/js/main.js"></script>
+</body>
+</html>
