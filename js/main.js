@@ -1,6 +1,6 @@
 "use strict";
 
-var resource = "http://localhost:8000";
+var resource = "http://localhost:9096";
 var token;
 
 $(document).on('ready', function()
@@ -66,7 +66,7 @@ var createTask = function()
 var deleteTask = function()
 {
     var id = $(this).data('id');
-    
+
     $.ajax({
         method: 'DELETE',
         url: resource + '/api/tasks/'+id+'?token=' + token,
@@ -102,8 +102,8 @@ var loadTasks = function()
 var showTasks = function(tasks)
 {
     $('#tasks').html('');
-    
-    for (var i = 0; i < tasks.length; i++) 
+
+    for (var i = 0; i < tasks.length; i++)
     {
         var task = tasks[i];
         showTask(task);
@@ -116,13 +116,13 @@ var showTask = function(task)
 {
     var hDelete = "<button data-id='"+task.id+"' class='waves-effect waves-light btn deep-orange accent-3'>delete</button>";
     var hDone;
-    
+
     if (task.done > 0) {
          hDone = 'Done';
     } else {
          hDone = 'Pending';
     }
-    
+
     $('#tasks').append('<tr><td>'+hDone+'</td><td>'+task.description+'</td><td>'+hDelete+'</td></tr>');
 }
 

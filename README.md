@@ -1,2 +1,8 @@
-# todo-api-server
-Proyecto de prueba para crear un api rest con laravel 5.1
+# todo-api-client
+
+用于验证 todo-api-server (https://github.com/wyrover/todo-api-server)
+
+## 登录
+
+user: zerausotein@gmail.com
+pass: 123456
